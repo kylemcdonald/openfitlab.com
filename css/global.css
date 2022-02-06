@@ -1,0 +1,501 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ----- MEYER RESET ----- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ----- LAYOUT -----*/
+
+html {
+	background: url(../images/tweed-dark.jpg) 0 0 repeat;
+}
+
+.masthead-container {
+	width: 100%;
+}
+
+.masthead {
+	width: 860px;
+	margin: 0 auto;
+	height: 70px;
+	padding: 0 10px;
+}
+
+.page-container {
+	width: 100%;
+}
+
+.page {
+	width: 860px;
+	margin: 0 auto;
+	min-height: 600px;
+	padding: 20px 10px 40px;
+}
+
+.footer-container {
+	width: 100%;
+	background: #222222;
+	min-height: 100px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	-moz-box-shadow: 0px 2px 4px #333333;
+	-webkit-box-shadow: 0px 2px 4px #333333;
+	-o-box-shadow: 0px 2px 4px #333333;
+	-ms-box-shadow: 0px 2px 4px #333333;
+    box-shadow: 0px 2px 4px #333333;
+}
+
+.footer-border {
+	width: 100%;
+	height: 100%;
+	border-top: 1px dashed #bfa631;
+	border-bottom: 1px dashed #bfa631;
+	padding: 10px 0px;
+}
+
+.footer {
+	width: 860px;
+	margin: 0 auto;
+	height: 100px;
+	color: #999999;
+	padding: 0 10px;
+}
+
+/* ----- FONTS ----- */
+
+@font-face {
+    font-family: 'CodaHeavy';
+    src: url('../fonts/Coda-Heavy-webfont.eot');
+    src: url('../fonts/Coda-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Coda-Heavy-webfont.woff') format('woff'),
+         url('../fonts/Coda-Heavy-webfont.ttf') format('truetype'),
+         url('../fonts/Coda-Heavy-webfont.svg#CodaHeavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'memoriaregular';
+    src: url('../fonts/memoria_-webfont.eot');
+    src: url('../fonts/memoria_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/memoria_-webfont.woff') format('woff'),
+         url('../fonts/memoria_-webfont.ttf') format('truetype'),
+         url('../fonts/memoria_-webfont.svg#memoriaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinRegular';
+    src: url('../fonts/Cabin-Regular-webfont.eot');
+    src: url('../fonts/Cabin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-Regular-webfont.woff') format('woff'),
+         url('../fonts/Cabin-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-Regular-webfont.svg#CabinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinItalic';
+    src: url('../fonts/Cabin-Italic-webfont.eot');
+    src: url('../fonts/Cabin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-Italic-webfont.woff') format('woff'),
+         url('../fonts/Cabin-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-Italic-webfont.svg#CabinItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinMedium';
+    src: url('../fonts/Cabin-Medium-webfont.eot');
+    src: url('../fonts/Cabin-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-Medium-webfont.woff') format('woff'),
+         url('../fonts/Cabin-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-Medium-webfont.svg#CabinMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinMediumItalic';
+    src: url('../fonts/Cabin-MediumItalic-webfont.eot');
+    src: url('../fonts/Cabin-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-MediumItalic-webfont.woff') format('woff'),
+         url('../fonts/Cabin-MediumItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-MediumItalic-webfont.svg#CabinMediumItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinSemiBold';
+    src: url('../fonts/Cabin-SemiBold-webfont.eot');
+    src: url('../fonts/Cabin-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-SemiBold-webfont.woff') format('woff'),
+         url('../fonts/Cabin-SemiBold-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-SemiBold-webfont.svg#CabinSemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinSemiBoldItalic';
+    src: url('../fonts/Cabin-SemiBoldItalic-webfont.eot');
+    src: url('../fonts/Cabin-SemiBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-SemiBoldItalic-webfont.woff') format('woff'),
+         url('../fonts/Cabin-SemiBoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-SemiBoldItalic-webfont.svg#CabinSemiBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinBold';
+    src: url('../fonts/Cabin-Bold-webfont.eot');
+    src: url('../fonts/Cabin-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-Bold-webfont.woff') format('woff'),
+         url('../fonts/Cabin-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-Bold-webfont.svg#CabinBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CabinBoldItalic';
+    src: url('../fonts/Cabin-BoldItalic-webfont.eot');
+    src: url('../fonts/Cabin-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cabin-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/Cabin-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Cabin-BoldItalic-webfont.svg#CabinBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ----- GENERAL ----- */
+
+body {
+	font-family: 'CabinRegular', arial, sans-serif;
+	font-size: 16px;
+	color: #cccccc;
+}
+
+a {
+	color: #f5f5f5;
+}
+
+a:hover {
+	color: #4a82be;
+	text-decoration: underline;
+}
+
+.page {
+	font-size: 18px;
+}
+
+.page p {
+	line-height: 1.5em;
+	text-shadow: -1px -1px 0px #333333;
+}
+
+h1 {
+	font-family: 'memoriaregular', arial, san-serif;
+}
+
+.logo-container {
+	width: 280px;
+	padding: 10px;
+	background: #222222;
+	position: relative;
+	z-index: 2;
+}
+
+.logo {
+	font-family: 'memoriaregular', arial, san-serif;
+	font-size: 48px;
+	margin-top: -12px;
+	padding: 25px 10px 15px 10px;
+	color: #ffffff;
+	text-align: right;
+	border: 1px dashed #bfa631;
+}
+
+.logo-container a:hover, .footer-logo a:hover {
+	text-decoration: none;
+}
+
+.logo img {
+	padding: 0px 12px;
+    margin-bottom: -4px;
+    margin-top: 8px;
+}
+
+.blue {
+	color: #4a82be;
+}
+
+.github-link {
+	position: absolute;
+	top: 55px;
+	right: 0px;
+	border: 0;
+	-webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.nav-menu-container {
+	width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #4a82be;
+    height: 15px;
+    padding: 20px 0px;
+	-moz-box-shadow: 0px 2px 4px #222222;
+	-webkit-box-shadow: 0px 2px 4px #222222;
+	-o-box-shadow: 0px 2px 4px #222222;
+	-ms-box-shadow: 0px 2px 4px #222222;
+    box-shadow: 0px 2px 4px #222222;
+}
+
+.nav-menu {
+	width: 860px;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.nav-menu li {
+	display: inline-block;
+	padding: 0px 30px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'memoriaregular', arial, san-serif;
+}
+
+.nav-menu li a {
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.nav-menu li a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nav-menu li.last {
+	padding: 0px 0px 0 30px;
+}
+
+/* ----- HOMEPAGE ----- */
+
+.event-title {
+	width: 500px;
+    font-size: 58px;
+	margin-left: 360px;
+	margin-bottom: 30px;
+	color: #f5f5f5;
+	text-align: left;
+	text-shadow: -1px -1px 0px #333333;
+}
+
+.flyer-container {
+	padding: 10px 0 10px 0;
+	margin: 0 0 16px -81px;
+
+}
+
+.flyer-container img {
+	padding: 10px;
+	border: 1px dashed #bfa631;
+}
+
+.hp-subtitle {
+	font-weight: bold;
+	margin-bottom: 4px;
+	font-size: 24px;
+	font-family: 'memoriaregular';
+	text-transform: uppercase;
+}
+
+.image-rotator {
+	background: #333333;
+	padding: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 800px;
+	box-sizing: border-box;
+}
+
+/* ----- PAGES ----- */
+
+.page-body {
+	margin-top: 80px;
+}
+
+.page-body a {
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.page-title {
+	width: 530px;
+    font-size: 47px;
+	margin-left: 330px;
+	margin-bottom: 50px;
+	color: #f5f5f5;
+	text-align: right;
+	text-shadow: -1px -1px 0px #333333;
+}
+
+b {
+	color: #eeeeee;
+}
+
+.page-img {
+	float: left;
+	padding: 10px;
+	border: 1px dashed #bfa631;
+	margin-right: 20px;
+	margin-bottom: 0px;
+	width: 320px;
+}
+
+.page p {
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+/* ----- FOOTER ----- */
+
+.footer .column-1, .footer .column-2, .footer .footer-logo {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer .column-1 {
+	width: 260px;
+	margin-right: 40px;
+}
+
+.footer h3 {
+	color: #bbbbbb;
+	font-family: 'memoriaregular';
+	text-transform: uppercase;
+	margin-top: 6px;
+	font-size: 18px;
+	margin-bottom: 12px;
+}
+
+.footer p, .footer li {
+	line-height: 20px;
+}
+
+.footer .column-1 p {
+	font-size: 14px;
+}
+
+.footer .column-2 {
+	width:80px;
+}
+
+.footer .column-2 a {
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.footer-logo {
+	float: right;
+}
+
+.f-logo {
+	font-size: 48px;
+	color: #f5f5f5;
+}
+
+.f-logo img {
+	padding: 22px 10px 0px 0px;
+}
+
+.copyright p {
+	font-size: 13px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+	.github-link {
+		top: -80px;
+	}
+}
